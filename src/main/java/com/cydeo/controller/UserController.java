@@ -22,44 +22,34 @@ public class UserController {
     @GetMapping
     public ResponseEntity<ResponseWrapper> getUsers(){
         List<UserDTO> userDTOList = userService.listAllUsers();
-        return ResponseEntity.ok(new ResponseWrapper("Users are successfully retrieves", userDTOList, HttpStatus.OK));
+        return ResponseEntity.ok(new ResponseWrapper("Users are successfully retrieves",userDTOList, HttpStatus.OK));
     }
 
-
-    @GetMapping("/{username")
+    @GetMapping("/{username}")
     public ResponseEntity<ResponseWrapper> getUserByUserName(@PathVariable("username") String userName){
         UserDTO user = userService.findByUserName(userName);
-        return ResponseEntity.ok(new ResponseWrapper("Users are successfully retrieves", user, HttpStatus.OK));
+        return ResponseEntity.ok(new ResponseWrapper("User is successfully retrieved",user, HttpStatus.OK));
     }
-
 
     @PostMapping
-    public ResponseEntity<ResponseWrapper> createUsers(@RequestBody UserDTO user){
+    public ResponseEntity<ResponseWrapper> createUser(@RequestBody UserDTO user){
         userService.save(user);
-        return  ResponseEntity.status(HttpStatus.CREATED).body(new ResponseWrapper("User is successfully created", HttpStatus.CREATED));
-
-
+        return ResponseEntity.status(HttpStatus.CREATED).body(new ResponseWrapper("User is successfully created",HttpStatus.CREATED));
     }
-
 
     @PutMapping
-    public ResponseEntity<ResponseWrapper> updateUsers(@RequestBody UserDTO user){
+    public ResponseEntity<ResponseWrapper> updateUser(@RequestBody UserDTO user){
         userService.update(user);
-        return ResponseEntity.ok(new ResponseWrapper("User is successfully updated", HttpStatus.OK));
+        return ResponseEntity.ok(new ResponseWrapper("User is successfully updated",HttpStatus.OK));
 
     }
-
 
     @DeleteMapping("/{username}")
-    public ResponseEntity<ResponseWrapper> deleteUsers(@PathVariable("username") String userName){
-           userService.delete(userName);
-           return ResponseEntity.ok(new ResponseWrapper("User is successfully deleted", HttpStatus.OK));
+    public ResponseEntity<ResponseWrapper> deleteUser(@PathVariable("username") String userName){
+        userService.delete(userName);
+        return ResponseEntity.ok(new ResponseWrapper("User is successfully deleted",HttpStatus.OK));
 
     }
-
-
-
-
 
 
 
