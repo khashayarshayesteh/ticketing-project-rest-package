@@ -1,0 +1,2 @@
+[INFO ] 2022-12-12 11:30:51.356 [http-nio-8081-exec-5] PerformanceAspect - Execution starts:
+[INFO ] 2022-12-12 11:30:51.571 [http-nio-8081-exec-5] PerformanceAspect - Time taken to execute: 211 ms - Method: UserController.getUsers()
