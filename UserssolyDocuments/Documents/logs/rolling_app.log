@@ -22,3 +22,7 @@
 [INFO ] 2022-12-20 00:41:11.285 [main] LoggingAspect - After Returning -> Method: ProjectController.updateProject(..), User: ozzy, Results: <200 OK OK,com.cydeo.dto.ResponseWrapper@3022287e,[]>
 [INFO ] 2022-12-20 00:51:34.131 [main] LoggingAspect - Before -> Method: ProjectController.deleteProject(..), User: ozzy
 [INFO ] 2022-12-20 00:51:34.483 [main] LoggingAspect - After Returning -> Method: ProjectController.deleteProject(..), User: ozzy, Results: <200 OK OK,com.cydeo.dto.ResponseWrapper@4df3b838,[]>
+[INFO ] 2022-12-20 18:48:17.463 [http-nio-8081-exec-2] LoggingAspect - Before -> Method: ProjectController.getProjects(), User: ozzy
+[INFO ] 2022-12-20 18:48:17.697 [http-nio-8081-exec-2] LoggingAspect - After Returning -> Method: ProjectController.getProjects(), User: ozzy, Results: <200 OK OK,com.cydeo.dto.ResponseWrapper@25845082,[]>
+[INFO ] 2022-12-22 03:17:28.966 [main] LoggingAspect - Before -> Method: ProjectController.getProjects(), User: ozzy
+[INFO ] 2022-12-22 03:17:29.173 [main] LoggingAspect - After Returning -> Method: ProjectController.getProjects(), User: ozzy, Results: <200 OK OK,com.cydeo.dto.ResponseWrapper@243b8682,[]>

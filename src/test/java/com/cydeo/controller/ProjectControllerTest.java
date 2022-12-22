@@ -43,8 +43,8 @@ class ProjectControllerTest {
     @BeforeAll
     static void setUp() {
 
-    //    token = "Bearer " + "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXLTdFc0kzVjVTRk5acUZuY201WW8zVVBkQjVIblNtTm9GX0d5WjJjVk44In0.eyJleHAiOjE2NzE2MDQ5NDYsImlhdCI6MTY3MTU4Njk0NiwianRpIjoiYmE5OWFjMGUtMGNhOC00Mzk4LTkwNmYtMmUyYWRhMWY1MDAyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL2N5ZGVvLWRldiIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJjYTcyZTU2MS05ZjFlLTQzNTQtOTdlNC0xOWFlN2NhY2NlY2EiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWNrZXRpbmctYXBwIiwic2Vzc2lvbl9zdGF0ZSI6ImQwYmMyN2QyLTI4MTQtNDc3ZS05MmExLTQwNTIzYmMzOTg0NSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY3lkZW8tZGV2IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ0aWNrZXRpbmctYXBwIjp7InJvbGVzIjpbIk1hbmFnZXIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJzaWQiOiJkMGJjMjdkMi0yODE0LTQ3N2UtOTJhMS00MDUyM2JjMzk4NDUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoib3p6eSJ9.W_-xNGcrUl5cwvCFiewY8IX-PUZ7DMlihCGFy0Mvk-kR-Uu-XWOuL3KZddlcO55C23xAAG3gjvsyxd50D1btOppAbfoVCsueWzcAO6a2c0ulIIx2yTDjOuUje2aWB4QKsH1YH93N41qeO0t9G3qUImhiNQWFGo-RKVbnc2YuJ_mf_5QbVfxPOPPcOiePmnBAf99re3ZQ5oR-XVZq3wGKWt6eJ62AdTRa82lRwY3E6SBClipHn63Q0Wdp_vGZOfM_3qYuRS3Bj2Mda3S6f847zOMk0RlvfKcW8hBTm_KhF1hpx9D_x1Z9HZwC8h57u7C2tWhxvX523eJhwp9BiPLttA";
-        token = "Bearer " +  getToken();   // I used this token for last method ( getToken()) that don't need postman
+        //    token = "Bearer " + "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXLTdFc0kzVjVTRk5acUZuY201WW8zVVBkQjVIblNtTm9GX0d5WjJjVk44In0.eyJleHAiOjE2NzE2MDQ5NDYsImlhdCI6MTY3MTU4Njk0NiwianRpIjoiYmE5OWFjMGUtMGNhOC00Mzk4LTkwNmYtMmUyYWRhMWY1MDAyIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo4MDgwL2F1dGgvcmVhbG1zL2N5ZGVvLWRldiIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJjYTcyZTU2MS05ZjFlLTQzNTQtOTdlNC0xOWFlN2NhY2NlY2EiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJ0aWNrZXRpbmctYXBwIiwic2Vzc2lvbl9zdGF0ZSI6ImQwYmMyN2QyLTI4MTQtNDc3ZS05MmExLTQwNTIzYmMzOTg0NSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgxIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsImRlZmF1bHQtcm9sZXMtY3lkZW8tZGV2IiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJ0aWNrZXRpbmctYXBwIjp7InJvbGVzIjpbIk1hbmFnZXIiXX0sImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwiLCJzaWQiOiJkMGJjMjdkMi0yODE0LTQ3N2UtOTJhMS00MDUyM2JjMzk4NDUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJlZmVycmVkX3VzZXJuYW1lIjoib3p6eSJ9.W_-xNGcrUl5cwvCFiewY8IX-PUZ7DMlihCGFy0Mvk-kR-Uu-XWOuL3KZddlcO55C23xAAG3gjvsyxd50D1btOppAbfoVCsueWzcAO6a2c0ulIIx2yTDjOuUje2aWB4QKsH1YH93N41qeO0t9G3qUImhiNQWFGo-RKVbnc2YuJ_mf_5QbVfxPOPPcOiePmnBAf99re3ZQ5oR-XVZq3wGKWt6eJ62AdTRa82lRwY3E6SBClipHn63Q0Wdp_vGZOfM_3qYuRS3Bj2Mda3S6f847zOMk0RlvfKcW8hBTm_KhF1hpx9D_x1Z9HZwC8h57u7C2tWhxvX523eJhwp9BiPLttA";
+        token = "Bearer " + getToken();  // I used this token for last method ( getToken()) that don't need postman
 
         manager = new UserDTO(2L,
                 "",
@@ -80,8 +80,8 @@ class ProjectControllerTest {
     @Test
     void givenToken_getProjects() throws Exception {     // hard coding for token
         mvc.perform(MockMvcRequestBuilders.get("/api/v1/project")
-                .header("Authorization", token)
-                .accept(MediaType.APPLICATION_JSON))
+                        .header("Authorization", token)
+                        .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.data[0].projectCode").exists())
                 .andExpect(jsonPath("$.data[0].assignedManager.userName").exists())  //if we have a userName field or not?
@@ -95,10 +95,10 @@ class ProjectControllerTest {
     void givenToken_createProject() throws Exception {
 
         mvc.perform(MockMvcRequestBuilders.post("/api/v1/project")
-                .header("Authorization", token)
-                .contentType(MediaType.APPLICATION_JSON)
-                .accept(MediaType.APPLICATION_JSON)
-                .content(toJsonString(project)))
+                        .header("Authorization", token)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON)
+                        .content(toJsonString(project)))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.message").value("Project is successfully created"));
     }
@@ -109,19 +109,19 @@ class ProjectControllerTest {
         project.setProjectName("API Project-2");
 
         mvc.perform(MockMvcRequestBuilders.put("/api/v1/project")
-                    .header("Authorization" , token)
-                    .contentType(MediaType.APPLICATION_JSON)
-                    .accept(MediaType.APPLICATION_JSON)
-                    .content(toJsonString(project)))
+                        .header("Authorization", token)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .accept(MediaType.APPLICATION_JSON)
+                        .content(toJsonString(project)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.message").value("Project is successfully updated"));
     }
 
     @Test
     void givenToken_deleteProject() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.delete("/api/v1/project/"+ project.getProjectCode())
-                .header("Authorization", token)
-                .accept(MediaType.APPLICATION_JSON))
+        mvc.perform(MockMvcRequestBuilders.delete("/api/v1/project/" + project.getProjectCode())
+                        .header("Authorization", token)
+                        .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.message").value("Project is successfully deleted"));
 
@@ -141,7 +141,7 @@ class ProjectControllerTest {
 
         map.add("grant_type", "password");
         map.add("client_id", "ticketing-app");
-        map.add("client_secret", "lSl4zDKD16GJtJeLFUfdWqX5fU8FVo0R");
+        map.add("client_secret", "E1Q8zbuazFOUYmFCWv6bgMVyEGXbOldC");
         map.add("username", "ozzy");
         map.add("password", "abc1");
         map.add("scope", "openid");
